@@ -1,0 +1,764 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./fonts/Gilroy-Thin.ttf') format('truetype');
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./fonts/Gilroy-UltraLight.ttf') format('truetype');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./fonts/Gilroy-Light.ttf') format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./fonts/Gilroy-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./fonts/Gilroy-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./fonts/Gilroy-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./fonts/Gilroy-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./fonts/Gilroy-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./fonts/Gilroy-Black.ttf') format('truetype');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./fonts/Gilroy-Heavy.ttf') format('truetype');
+    font-weight: 1000;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy', sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.trackinc-main-container {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    background-color: #ddd;
+    overflow: hidden;
+    overflow: hidden;
+}
+
+
+/* Navbar CSS.................................................................. */
+.navbar-main-container {
+    width: 243px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.hamburger-icon {
+    display: none;
+}
+
+.alert-user-container {
+    display: none;
+}
+
+.navbar-heading-container {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-logo-container {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #E4E7ED;
+}
+
+.navbar-menu-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: calc(100% - 60px);
+    background-color: white;
+}
+
+.navbar-menu1-container {
+    margin: 0px 12px;
+    margin-top: 10px;
+}
+
+.navbar-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-li a {
+    text-decoration: none;
+}
+
+.navbar-li.active {
+    background-color: #e0f7fa;
+    border-radius: 8px;
+}
+
+.navbar-li.active p {
+    color: #1CD2AD;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.navbar-li.dashboard.active img {
+    content: url('./assests/icons/dashboard-on.svg');
+}
+
+.navbar-li.invoices.active img {
+    content: url('./assests/icons/invoice-on.svg');
+}
+
+.navbar-li.proposals.active img {
+    content: url('./assests/icons/proposals-on.svg');
+}
+
+.navbar-li.services.active img {
+    content: url('./assests/icons/services-on.svg');
+}
+
+.navbar-li.transactions.active img {
+    content: url('./assests/icons/transactions-on.svg');
+}
+
+.navbar-li.projects.active img {
+    content: url('./assests/icons/projects-on.svg');
+}
+
+.navbar-li.customers.active img {
+    content: url('./assests/icons/customers-on.svg');
+}
+
+.navbar-li.settings.active img {
+    content: url('./assests/icons/settings-on.svg');
+}
+
+.navbar-li.logout.active img {
+    content: url('./assests/icons/logout-on.svg');
+}
+
+.navbar-li-item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 0px;
+    padding-left: 24px;
+}
+
+.navbar-li-item img {
+    width: 24px;
+}
+
+.navbar-li-item p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #767676;
+}
+
+.navbar-menu2-container {
+    border-top: 1px solid #E4E7ED;
+    padding-top: 10px;
+}
+
+.navbar-menu2-container .navbar-li {
+
+    margin: 0px 12px;
+}
+
+
+
+
+/* Dashboard CSS.................................................................. */
+.background-container {
+    width: calc(100% - 243px);
+    height: 150px;
+    background-color: #121E48;
+    position: absolute;
+    top: 0;
+}
+
+.dashboard-heading-container {
+    width: calc(100% - 243px);
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+}
+
+/* Heading 1 CSS.............................. */
+.dashboard-heading-content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcome-line-container {
+    color: white;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.welcome-line-span {
+    color: #1CD2AD;
+}
+
+.search-alert-user-container {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-container input {
+    width: 214px;
+    height: 40px;
+    border-radius: 100px;
+    padding: 10px 16px;
+    padding-left: 48px;
+    color: white;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.search-container input::placeholder {
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 1;
+}
+
+.search-container input:focus {
+    outline: none;
+}
+
+.search-container img {
+    position: absolute;
+    top: 10px;
+    left: 16px;
+}
+
+.alert-container {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.alert-container img {
+    width: 24px;
+    height: 24px;
+}
+
+.dot-container {
+    width: 8px;
+    height: 8px;
+    background-color: #EC4A4A;
+    border-radius: 100px;
+    border: 2px solid #121E48;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.user-container {
+    width: 40px;
+    height: 40px;
+}
+
+.user-container img {
+    width: 40px;
+    height: 40px;
+}
+
+
+/* Heading 2 CSS.............................. */
+.dashboard-subheading-content-container {
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.dashboard-subheading-content-container p {
+    font-size: 30px;
+    color: white;
+    font-weight: 600;
+}
+
+
+/* Accountdata CSS.............................. */
+.accountdata-boxes-container {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.accountdata-box-container {
+    min-width: 263px;
+    max-width: 100%;
+    flex-shrink: 0;
+    flex-grow: 1;
+    height: 90px;
+    background-color: white;
+    border: 0.5px solid #EBEBEB;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.accountdata-details-container {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.accountdata-figure {
+    font-size: 20px;
+    font-weight: 600;
+    color: #12141D;
+}
+
+.accountdata-name {
+    font-size: 16px;
+    font-weight: 400;
+    color: #12141D;
+    opacity: 50%;
+}
+
+.accountdata-icon-container {
+    position: absolute;
+    bottom: -8px;
+    right: 20px;
+}
+
+.accountdata-icon-container img {
+    width: 48px;
+    height: 38.86px;
+}
+
+
+/* Table CSS.............................. */
+.tabledata-container {
+    box-sizing: border-box;
+    height: calc(100vh - 390px);
+    overflow: hidden;
+    background-color: white;
+    border-radius: 16px;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.04);
+    padding: 20px;
+    overflow: auto;
+    z-index: 500;
+    clip-path: inset(0 round 16px);
+}
+
+.tabledata-container::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+.tabledata-container::-webkit-scrollbar-thumb {
+    background-color: #C7C8D9;
+    border-radius: 9px;
+    background-clip: padding-box;
+}
+
+.tabledata-heading-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.tabledata-heading-container p {
+    font-size: 16px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.tabledata-heading-container button {
+    background-color: #1CD2AD;
+    padding: 8px 12px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+}
+
+.tabledata-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    text-align: left;
+}
+
+.tabledata-table thead tr {
+    height: 52px;
+    border-bottom: 1px solid #AAAAAA;
+}
+
+.tabledata-table thead th {
+    padding: 0px 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.tabledata-table tbody tr {
+    height: 52px;
+    color: #8E90A6;
+    font-weight: 400;
+}
+
+.tabledata-table tbody td {
+    padding: 0px 10px;
+}
+
+.tabledata-table tbody tr:nth-of-type(even) {
+    background-color: #F9FBFB;
+}
+
+.tabledata-table tbody tr td:nth-child(1),
+.tabledata-table tbody tr td:nth-child(4) {
+    font-weight: 600;
+}
+
+.tabledata-table tbody tr td:nth-child(2),
+.tabledata-table tbody tr td:nth-child(3) {
+    font-weight: 400;
+}
+
+.tabledata-table tbody tr td button {
+    width: 100px;
+    height: 19px;
+    padding: 2px 16px;
+    border-radius: 20px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.tabledata-table tbody tr:nth-child(1) td button,
+.tabledata-table tbody tr:nth-child(5) td button {
+    background-color: #E5F7FB;
+    color: #18C3D9;
+}
+
+.tabledata-table tbody tr:nth-child(2) td button,
+.tabledata-table tbody tr:nth-child(7) td button {
+    background-color: rgba(170, 170, 170, 0.2);
+    color: #AAAAAA;
+}
+
+.tabledata-table tbody tr:nth-child(3) td button,
+.tabledata-table tbody tr:nth-child(4) td button {
+    background-color: rgba(28, 210, 173, 0.2);
+    color: #1CD2AD;
+}
+
+.tabledata-table tbody tr:nth-child(6) td button {
+    background-color: #FEDBDB;
+    color: #EC4A4A;
+}
+
+
+/* Events CSS.............................. */
+.events-container {
+    width: 50%;
+    height: 150px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.04);
+    clip-path: inset(0 round 16px);
+}
+
+.events-container::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+.events-container::-webkit-scrollbar-thumb {
+    background-color: #C7C8D9;
+    border-radius: 9px;
+    background-clip: padding-box;
+}
+
+.events-heading-container {
+    font-size: 16px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.events-list-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.event-box-container {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.event-image-container {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.event-image-container img {
+    width: 48px;
+    height: 48px;
+}
+
+.event-data-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.person-name-container {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1C1C28;
+}
+
+.event-details-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.event-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1E88E5;
+}
+
+.event-dot-container {
+    width: 4px;
+    height: 4px;
+    background-color: #C7C8D9;
+    border-radius: 100px;
+}
+
+.event-date {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555770;
+}
+
+.event-button-container button {
+    height: 26px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    border: none;
+    background-color: #1E88E5;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+
+
+/* Responsive CSS.................................................................. */
+@media (max-width:1024px) {
+
+    .trackinc-main-container {
+        flex-direction: column;
+        position: absolute;
+    }
+
+    .navbar-main-container {
+        height: 60px;
+        width: 100%;
+        flex-direction: column;
+        background-color: white;
+        z-index: 1000;
+        position: fixed;
+        top: 0;
+        left: 0;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar-heading-container {
+        padding: 0px 20px;
+    }
+
+    .navbar-menu-container {
+        visibility: hidden; 
+        opacity: 0; 
+        height: 100%;
+        background-color: white;
+        transform: translateY(-20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .navbar-menu-container.active {
+        visibility: visible; 
+        opacity: 1;
+        transform: translateY(0);
+        height: calc(100% - 60px);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-top: 1px solid #E4E7ED;
+        background-color: white;
+        z-index: 1000;
+        overflow: visible;
+        position: fixed;
+        top: 60px;
+        overflow: auto;
+    }
+
+    .hamburger-icon {
+        display: flex;
+        background-color: #121E48;
+        color: white;
+        padding: 10px;
+    }
+
+    .alert-user-container {
+        display: flex;
+        gap: 8px;
+    }
+
+    .alert-container {
+        background-color: #121E48;
+        border-radius: 100px;
+
+    }
+
+    .navbar-logo-container {
+        border-bottom: none;
+    }
+
+    .background-container {
+        position: relative;
+        width: 100%;
+    }
+
+    .dashboard-main-container {
+        position: relative;
+        width: 100%;
+        top: 60px;
+        height: calc(100% - 60px);
+        overflow: auto;
+    }
+
+    .dashboard-heading-container {
+        width: 100%;
+    }
+
+    .search-alert-user-container .alert-container {
+        display: none;
+    }
+
+    .search-alert-user-container .user-container {
+        display: none;
+    }
+
+    .dashboard-heading-content-container {
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+
+    .tabledata-container {
+        height: max-content;
+        overflow-x: auto;
+    }
+
+    .events-container {
+        width: 100%;
+        height: max-content;
+        overflow: hidden;
+        overflow-x: auto;
+    }
+}

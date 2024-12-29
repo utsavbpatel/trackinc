@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrackInc</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="trackinc-main-container">
+        <div class="navbar-main-container">
+            <div class="navbar-heading-container">
+                <div id='hamburger' class="hamburger-icon" onclick="toggleMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="navbar-logo-container">
+                    <a href="#">
+                        <img src="./assests/logo/Logo.svg">
+                    </a>
+                </div>
+                <div class="alert-user-container">
+                    <div class="alert-container">
+                        <a href="#">
+                            <img src="./assests/icons/notifications.svg">
+                            <div class="dot-container"></div>
+                        </a>
+
+                    </div>
+                    <div class="user-container">
+                        <a href="#">
+                            <img src="./assests/avatars/Ellipse 3.svg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-menu-container" id="menu">
+                <div class="navbar-menu1-container">
+                    <ul class="navbar-ul">
+                        <li class="navbar-li dashboard active"><a href="#">
+                                <div class="navbar-li-item"><img src="./assests/icons/dashboard-off.svg">
+                                    <p>Dashboard</p>
+                                </div>
+                            </a></li>
+                        <li class="navbar-li invoices"><a href="#">
+                                <div class="navbar-li-item"><img src="./assests/icons/invoice-off.svg">
+                                    <p>Invoices</p>
+                                </div>
+                            </a></li>
+                        <li class="navbar-li proposals"><a href="#">
+                                <div class="navbar-li-item"><img src="./assests/icons/proposals-off.svg">
+                                    <p>Proposals</p>
+                                </div>
+                            </a></li>
+                        <li class="navbar-li services"><a href="#">
+                                <div class="navbar-li-item"><img id="icon" src="./assests/icons/services-off.svg">
+                                    <p>Services</p>
+                                </div>
+                            </a></li>
+                        <li class="navbar-li transactions"><a href="#">
+                                <div class="navbar-li-item"><img src="./assests/icons/transactions-off.svg">
+                                    <p>Transactions</p>
+                                </div>
+                            </a></li>
+                        <li class="navbar-li projects"><a href="#">
+                                <div class="navbar-li-item"><img src="./assests/icons/projects-off.svg">
+                                    <p>Projects</p>
+                                </div>
+                            </a></li>
+                        <li class="navbar-li customers"><a href="#">
+                                <div class="navbar-li-item"><img src="./assests/icons/customers.svg">
+                                    <p>Customers</p>
+                                </div>
+                            </a></li>
+                    </ul>
+                </div>
+
+                <div class="navbar-menu2-container">
+                    <ul class="navbar-ul">
+                        <li class="navbar-li settings"><a href="#">
+                                <div class="navbar-li-item"><img src="./assests/icons/settings-off.svg">
+                                    <p>Settings</p>
+                                </div>
+                            </a></li>
+                        <li class="navbar-li logout"><a href="#">
+                                <div class="navbar-li-item"><img src="./assests/icons/logout-off.svg">
+                                    <p>Log out</p>
+                                </div>
+                            </a></li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div id="overlay" class="overlay"></div>
+
+        <div class="dashboard-main-container">
+            <div class="background-container">
+
+            </div>
+            <div class="dashboard-heading-container">
+                <div class="dashboard-heading-content-container">
+                    <div class="welcome-line-container">
+                        Hi, Welcome back <span class="welcome-line-span">Robert!</span>
+                    </div>
+                    <div class="search-alert-user-container">
+                        <div class="search-container">
+                            <input type="text" placeholder="Search...">
+                            <img src="./assests/icons/search.svg">
+                        </div>
+                        <div class="alert-container">
+                            <img src="./assests/icons/notifications.svg">
+                            <div class="dot-container"></div>
+                        </div>
+                        <div class="user-container">
+                            <img src="./assests/avatars/Ellipse 3.svg">
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-subheading-content-container">
+                    <p>Financial Overview</p>
+                </div>
+                <div class="accountdata-boxes-container">
+                    <div class="accountdata-box-container">
+                        <div class="accountdata-details-container">
+                            <p class="accountdata-figure">$ 2,77,120</p>
+                            <p class="accountdata-name">Sales</p>
+                        </div>
+                        <div class="accountdata-icon-container">
+                            <img src="./assests/icons/insights.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="accountdata-box-container">
+                        <div class="accountdata-details-container">
+                            <p class="accountdata-figure">$ 60,100</p>
+                            <p class="accountdata-name">Expense</p>
+                        </div>
+                        <div class="accountdata-icon-container">
+                            <img src="./assests/icons/Expense.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="accountdata-box-container">
+                        <div class="accountdata-details-container">
+                            <p class="accountdata-figure">$ 57,230</p>
+                            <p class="accountdata-name">Profit</p>
+                        </div>
+                        <div class="accountdata-icon-container">
+                            <img src="./assests/icons/Profit.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="accountdata-box-container">
+                        <div class="accountdata-details-container">
+                            <p class="accountdata-figure">$ 1,60,124</p>
+                            <p class="accountdata-name">Income</p>
+                        </div>
+                        <div class="accountdata-icon-container">
+                            <img src="./assests/icons/Income.svg" alt="">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="tabledata-container">
+                    <div class="tabledata-heading-container">
+                        <p>Current Projects</p>
+                        <button>Create</button>
+                    </div>
+                    <div class="tabledata-table-container">
+                        <table class="tabledata-table">
+                            <thead>
+                                <tr>
+                                    <th>Project Name</th>
+                                    <th>Customer</th>
+                                    <th>Sent Date</th>
+                                    <th>Amount</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Travel app design</td>
+                                    <td>Jacob jones</td>
+                                    <td>28 Oct 2022</td>
+                                    <td>$ 240.90</td>
+                                    <td><button>SENT</button></td>
+                                </tr>
+                                <tr>
+                                    <td>UX Research for Event management app</td>
+                                    <td>Wade Warren</td>
+                                    <td>18 Oct 2022</td>
+                                    <td>$ 120.00</td>
+                                    <td><button>DRAFT</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Redesign - Food delivery app</td>
+                                    <td>Annette Black</td>
+                                    <td>15 Oct 2022</td>
+                                    <td>$ 351.00</td>
+                                    <td><button>PAID</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Web App - Online Learning</td>
+                                    <td>Cameron Williamson</td>
+                                    <td>15 Oct 2022</td>
+                                    <td>$ 240.90</td>
+                                    <td><button>PAID</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Railway web casestudy</td>
+                                    <td>Robert Fox</td>
+                                    <td>13 Oct 2022</td>
+                                    <td>$ 153.00</td>
+                                    <td><button>SENT</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Responsive web design</td>
+                                    <td>Floyd Miles</td>
+                                    <td>06 Oct 2022</td>
+                                    <td>$ 140.90</td>
+                                    <td><button>REJECTED</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Music app design</td>
+                                    <td>Theresa Webb</td>
+                                    <td>04 Oct 2022</td>
+                                    <td>$ 345.90</td>
+                                    <td><button>DRAFT</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="events-container">
+                    <div class="events-heading-container">
+                        <p>Events</p>
+                    </div>
+                    <div class="events-list-container">
+                        <div class="event-box-container">
+                            <div class="event-image-container">
+                                <img src="./assests/avatars/Ellipse 45.svg">
+                                <div class="event-data-container">
+                                    <div class="person-name-container">
+                                        <p>Wade Warren</p>
+                                    </div>
+                                    <div class="event-details-container">
+                                        <p>🎂</p>
+                                        <p class="event-name">Birthday</p>
+                                        <div class="event-dot-container"></div>
+                                        <p class="event-date">Today</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event-button-container">
+                                <button>Wish</button>
+                            </div>
+                        </div>
+                        <div class="event-box-container">
+                            <div class="event-image-container">
+                                <img src="./assests/avatars/Ellipse 46.svg">
+                                <div class="event-data-container">
+                                    <div class="person-name-container">
+                                        <p>Wade Warren</p>
+                                    </div>
+                                    <div class="event-details-container">
+                                        <p>🎉</p>
+                                        <p class="event-name">Joining Us</p>
+                                        <div class="event-dot-container"></div>
+                                        <p class="event-date">Today</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event-button-container">
+                                <button>Congratulations</button>
+                            </div>
+                        </div>
+                        <div class="event-box-container">
+                            <div class="event-image-container">
+                                <img src="./assests/avatars/Ellipse 47.svg">
+                                <div class="event-data-container">
+                                    <div class="person-name-container">
+                                        <p>Wade Warren</p>
+                                    </div>
+                                    <div class="event-details-container">
+                                        <p>💼</p>
+                                        <p class="event-name">Work Anniversary</p>
+                                        <div class="event-dot-container"></div>
+                                        <p class="event-date">7 September 2022</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event-button-container">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
