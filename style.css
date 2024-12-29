@@ -742,8 +742,15 @@ body {
         overflow: auto;
     }
 
+    .dashboard-main-container{
+        width: 100%;
+        height: calc(100% - 60px);
+        overflow: visible;
+        overflow: auto;
+    }
     .dashboard-heading-container {
         width: 100%;
+        height: auto;
     }
 
     .search-alert-user-container .alert-container {
