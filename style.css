@@ -225,6 +225,13 @@ body {
 
 
 /* Dashboard CSS.................................................................. */
+.dashboard-main-container{
+    width: calc(100% - 243px);
+    height: 100%;
+    overflow: hidden;
+    overflow: auto;
+    border: 1px solid red;
+}
 .background-container {
     width: calc(100% - 243px);
     height: 150px;
